@@ -1,0 +1,138 @@
+{
+  "FreeWeaponCFG": {
+    "CommandList": [
+      {
+        "WeaponName": "AS50狙击步枪",
+        "WeaponCommand": "sw_sb2YWrszaUeZkbfx"
+      },
+      {
+        "WeaponName": "sg552-地狱犬",
+        "WeaponCommand": "sw_i8mo0MCtSp6VfUPP"
+      },
+      {
+        "WeaponName": "圣诞毁灭者",
+        "WeaponCommand": "sw_kYOuiOxgr0mSnCMv"
+      },
+      {
+        "WeaponName": "黄金沙鹰",
+        "WeaponCommand": "sw_gkRBFupJJQk3B0Uh"
+      },
+      {
+        "WeaponName": "M4A1-Tech",
+        "WeaponCommand": "sw_pHfytgMYj3RQTphm"
+      },
+      {
+        "WeaponName": "M249-凤凰",
+        "WeaponCommand": "sw_JKt3z4oDXZ99QoaP"
+      },
+      {
+        "WeaponName": "MP7-凤凰",
+        "WeaponCommand": "sw_5tBgDDDOIo3wprxM"
+      },
+      {
+        "WeaponName": "原神-Scar20",
+        "WeaponCommand": "sw_8mISNzt7YbXolphk"
+      },
+      {
+        "WeaponName": "CROW-3",
+        "WeaponCommand": "sw_ZEY4QukRRmZtJdWN"
+      },
+      {
+        "WeaponName": "AUG-无双",
+        "WeaponCommand": "sw_7HxN22k2SdZWIZFo"
+      },
+      {
+        "WeaponName": "旋风AK",
+        "WeaponCommand": "sw_wLEnuqGJn3CuUv4Y"
+      },
+      {
+        "WeaponName": "MK18",
+        "WeaponCommand": "sw_fzi8GfK3JBu1AKJZ"
+      },
+      {
+        "WeaponName": "M99-电磁炮",
+        "WeaponCommand": "sw_ykSvWNxoPJyNFEtR"
+      },
+      {
+        "WeaponName": "Destroyer",
+        "WeaponCommand": "sw_Z2ZpSw6sY8E8LXoD"
+      },
+      {
+        "WeaponName": "恒宇双星",
+        "WeaponCommand": "sw_4p1V0qwdgckwdG8X"
+      },
+      {
+        "WeaponName": "星红双子",
+        "WeaponCommand": "sw_YcmNV0uqsxUCkiCQ"
+      },
+      {
+        "WeaponName": "金红双蝎",
+        "WeaponCommand": "sw_B5GTQyKyzsBvadG0"
+      },
+      {
+        "WeaponName": "英雄-SVD",
+        "WeaponCommand": "sw_nbhfvaW21rBTJ2Ll"
+      },
+      {
+        "WeaponName": "M4A1-雷神",
+        "WeaponCommand": "sw_Wfb7QazPiQUbhXRk"
+      },
+      {
+        "WeaponName": "MCW-ice",
+        "WeaponCommand": "sw_UbiXTyhpQzJd5Lgt"
+      },
+      {
+        "WeaponName": "PKM-火焰",
+        "WeaponCommand": "sw_wJzvIiGahHwhTueH"
+      },
+      {
+        "WeaponName": "狙击加利尔",
+        "WeaponCommand": "sw_DLmE0PLTUg0dlchU"
+      },
+      {
+        "WeaponName": "M5A3-Obsidian",
+        "WeaponCommand": "sw_PaVBF9xUZHmWsIiZ"
+      },
+      {
+        "WeaponName": "冰冻双蝎",
+        "WeaponCommand": "sw_Jrf0sfDEoWLT8hj7"
+      },
+      {
+        "WeaponName": "鲨鱼M3",
+        "WeaponCommand": "sw_apjoiGwvgmRUCtMG"
+      },
+      {
+        "WeaponName": "MG3-充能",
+        "WeaponCommand": "sw_KBirhOKDersFYDpE"
+      },
+      {
+        "WeaponName": "skull5",
+        "WeaponCommand": "sw_p1ykcV9uLe8Bn0zG"
+      },
+      {
+        "WeaponName": "SkyAK-I",
+        "WeaponCommand": "sw_1uAQQGQSCnN4HqeD"
+      },
+      {
+        "WeaponName": "SkyAK-II",
+        "WeaponCommand": "sw_640STPsNaJhL8kml"
+      },
+      {
+        "WeaponName": "Doom",
+        "WeaponCommand": "sw_IAzQYQgCEHOEizJK"
+      },
+      {
+        "WeaponName": "玫瑰刺刀",
+        "WeaponCommand": "sw_awbcRTNjNOmZLbKT"
+      },
+      {
+        "WeaponName": "AK-4X",
+        "WeaponCommand": "sw_7QlZ6N87qCJS9cad"
+      },
+      {
+        "WeaponName": "ASCI47",
+        "WeaponCommand": "sw_S9fUH2zvtKzmG96D"
+      }
+    ]
+  }
+}
