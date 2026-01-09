@@ -1,0 +1,10 @@
+{
+    "MenuTitle": "[H-AN/Weapons] Custom Weapon Menu",
+    "MenuSelectWeapons": "Select the weapon you want to purchase",
+    "MenuCD": "There is a cooldown on using the weapon menu. Please do not spam it!",
+    "NeedMoney": "You do not have enough money. Required: {0}",
+    "AliveCheck": "You must be alive to use this!",
+    "MenuButtonMove": "Move",
+    "MenuButtonConfirm": "Confirm",
+    "MenuButtonCancel": "Cancel"
+}

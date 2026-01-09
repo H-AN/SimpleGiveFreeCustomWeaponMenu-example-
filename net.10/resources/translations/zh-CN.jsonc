@@ -1,0 +1,10 @@
+{
+	"MenuTitle": "[H-AN/武器]自定义武器菜单",
+	"MenuSelectWeapons": "选择你想购买的武器",
+	"MenuCD": "武器菜单使用有CD限制，请勿恶意刷武器！",
+	"NeedMoney": "你的金钱不足，需要 {0}",
+	"AliveCheck": "必须活着才能使用！",
+	"MenuButtonMove": "移动",
+	"MenuButtonConfirm": "确认",
+	"MenuButtonCancel": "取消"
+}
