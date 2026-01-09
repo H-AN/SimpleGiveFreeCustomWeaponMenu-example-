@@ -4,7 +4,7 @@ using SwiftlyS2.Shared;
 using SwiftlyS2.Shared.Commands;
 using SwiftlyS2.Shared.Players;
 
-namespace HanFreeWeapon;
+namespace HanWeaponMenu;
 
 public class Commands
 {
@@ -36,7 +36,7 @@ public class Commands
 
         if (!Controller.PawnIsAlive)
         {
-            player.SendMessage(MessageType.Chat, $"必须活着才能使用");
+            player.SendMessage(MessageType.Chat, $"{_core.Translation.GetPlayerLocalizer(player)["AliveCheck"]}");
             return;
         }
 

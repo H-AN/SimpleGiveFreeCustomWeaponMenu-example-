@@ -11,19 +11,20 @@ using SwiftlyS2.Shared.Players;
 using SwiftlyS2.Shared.Plugins;
 using SwiftlyS2.Shared.SteamAPI;
 
-namespace HanFreeWeapon;
+namespace HanWeaponMenu;
 
 public class Menu
 {
     private readonly ILogger<Menu> _logger;
     private readonly ISwiftlyCore _core;
     private readonly MenuHelper _menuhelper;
-    private readonly IOptionsMonitor<FreeWeaponConfig> _config;
+    private readonly IOptionsMonitor<WeaponMenu> _config;
 
-    public bool[] MenuCD { get; set; } = new bool[65];
+    public Dictionary<int, bool> MenuCD { get; set; } = new Dictionary<int, bool>();
+
     public Menu(ISwiftlyCore core, ILogger<Menu> logger,
         MenuHelper menuHelper,
-        IOptionsMonitor<FreeWeaponConfig> config)
+        IOptionsMonitor<WeaponMenu> config)
     {
         _core = core;
         _logger = logger;
@@ -34,11 +35,11 @@ public class Menu
     public IMenuAPI OpenFreeMenu(IPlayer player)
     {
         var main = _core.MenusAPI.CreateBuilder();
-        IMenuAPI menu = _menuhelper.CreateMenu($"[华仔]免费武器菜单");
+        IMenuAPI menu = _menuhelper.CreateMenu($"{_core.Translation.GetPlayerLocalizer(player)["MenuTitle"]}");
 
         // 顶部滚动文字
         menu.AddOption(new TextMenuOption(HtmlGradient.GenerateGradientText(
-            $"选择你想获取的武器",
+            $"{_core.Translation.GetPlayerLocalizer(player)["MenuSelectWeapons"]}",
             Color.Red, Color.LightBlue, Color.Red),
             updateIntervalMs: 500, pauseIntervalMs: 100)
         {
@@ -55,40 +56,77 @@ public class Menu
                 if(pawn == null || !pawn.IsValid)
                     continue;
 
-                if(pawn.TeamNum != 3)
+                int team = pawn.TeamNum;
+                string cfgTeam = Cfg.Team?.ToUpper() ?? "ALL";
+
+                
+                if (cfgTeam == "CT" && team != 3)
                     continue;
 
+                if (cfgTeam == "T" && team != 2)
+                    continue;
 
-                string buttonText = $"{Cfg.WeaponName}";
+                if (cfgTeam != "CT" && cfgTeam != "T" && cfgTeam != "ALL")
+                    continue;
+                
+                string buttonText = $"{Cfg.WeaponName}|{Cfg.Price}$";
 
-                var turretButton = new ButtonMenuOption(buttonText)
+                var Button = new ButtonMenuOption(buttonText)
                 {
                     TextStyle = MenuOptionTextStyle.ScrollLeftLoop,
                     CloseAfterClick = false
                 };
-                turretButton.Tag = "extend";
+                Button.Tag = "extend";
 
-                turretButton.Click += async (_, args) =>
+                Button.Click += async (_, args) =>
                 {
                     var clicker = args.Player;
+
                     _core.Scheduler.NextTick(() =>
                     {
                         if (!clicker.IsValid)
                             return;
 
-                        if (MenuCD[player.PlayerID])
+                        
+                        if (MenuCD.TryGetValue(clicker.PlayerID, out bool cd) && cd)
                         {
-                            player.SendMessage(MessageType.Chat, "使用有CD,不要乱刷武器!!");
+                            clicker.SendMessage(MessageType.Chat, $"{_core.Translation.GetPlayerLocalizer(player)["MenuCD"]}");
                             return;
                         }
 
-                        player.ExecuteCommand($"{Cfg.WeaponCommand}");
-                        MenuCD[player.PlayerID] = true;
-                        _core.Scheduler.DelayBySeconds(1.0f, () =>{ MenuCD[player.PlayerID] = false; });
+                        
+                        var money = clicker.Controller.InGameMoneyServices;
+                        if (money == null || !money.IsValid)
+                            return;
+
+                        int current = money.Account;
+
+                        
+                        if (current < Cfg.Price)
+                        {
+                            clicker.SendMessage(MessageType.Chat, $"{_core.Translation.GetPlayerLocalizer(player)["NeedMoney", $"{Cfg.Price}$"]}"); //你的金钱不足，需要 {Cfg.Price}$!
+                            return;
+                        }
+
+                        
+                        current -= Cfg.Price;
+                        money.Account = current;
+                        clicker.Controller.InGameMoneyServicesUpdated();
+
+                        
+                        if (!string.IsNullOrWhiteSpace(Cfg.WeaponCommand))
+                            clicker.ExecuteCommand(Cfg.WeaponCommand);
+
+                        
+                        MenuCD[clicker.PlayerID] = true;
+                        _core.Scheduler.DelayBySeconds(1.0f, () =>
+                        {
+                            MenuCD[clicker.PlayerID] = false;
+                        });
                     });
                 };
 
-                menu.AddOption(turretButton);
+                menu.AddOption(Button);
             }
         }
 

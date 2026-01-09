@@ -1,15 +1,11 @@
-using System.Reflection.Emit;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using Mono.Cecil.Cil;
-using SwiftlyS2.Core.Menus.OptionsBase;
 using SwiftlyS2.Shared;
 using SwiftlyS2.Shared.Menus;
 using SwiftlyS2.Shared.Players;
 using SwiftlyS2.Shared.Plugins;
 using System.Drawing;
 
-namespace HanFreeWeapon;
+namespace HanWeaponMenu;
 
 public class MenuHelper
 {
@@ -47,12 +43,12 @@ public class MenuHelper
             keybindOverrides: keys,
             optionScrollStyle: MenuOptionScrollStyle.WaitingCenter
             );
-        
-        menu.DefaultComment = HtmlGradient.GenerateGradientText("[W/S]", Color.Crimson) + HtmlGradient.GenerateGradientText($"移动", Color.White)
-            + HtmlGradient.GenerateGradientText("[E]", Color.Crimson) + HtmlGradient.GenerateGradientText($"确认", Color.White)
-            + HtmlGradient.GenerateGradientText("[SHIFT]", Color.Crimson) + HtmlGradient.GenerateGradientText($"取消", Color.White)
+
+        menu.DefaultComment = HtmlGradient.GenerateGradientText("[W/S]", Color.Crimson) + HtmlGradient.GenerateGradientText($"{_core.Localizer["MenuButtonMove"]}", Color.White)
+            + HtmlGradient.GenerateGradientText("[E]", Color.Crimson) + HtmlGradient.GenerateGradientText($"{_core.Localizer["MenuButtonConfirm"]}", Color.White)
+            + HtmlGradient.GenerateGradientText("[SHIFT]", Color.Crimson) + HtmlGradient.GenerateGradientText($"{_core.Localizer["MenuButtonCancel"]}", Color.White)
             ;
-        
+
         return menu;
     }
 

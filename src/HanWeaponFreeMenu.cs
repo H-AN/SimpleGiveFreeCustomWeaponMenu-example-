@@ -6,33 +6,33 @@ using SwiftlyS2.Shared;
 using SwiftlyS2.Shared.Plugins;
 using Microsoft.Extensions.Logging;
 
-namespace HanFreeWeapon;
+namespace HanWeaponMenu;
 
 [PluginMetadata(
-    Id = "HanFreeWeaponMenu",
+    Id = "HanWeaponMenu",
     Version = "1.0",
-    Name = "H-AN 免费武器菜单/H-AN Free Weapons",
+    Name = "H-AN 武器菜单/H-AN Weapons menu",
     Author = "H-AN",
-    Description = "CS2 免费武器菜单/Free Weapons")]
+    Description = "简单武器系统菜单,支持价格与队伍/Simple weapon system menu, supports price and team")]
 
 public partial class HanTurretS2(ISwiftlyCore core) : BasePlugin(core)
 {
     private ServiceProvider? ServiceProvider { get; set; }
     private Commands _Commands = null!;
-    private IOptionsMonitor<FreeWeaponConfig> _CFGMonitor = null!;
+    private IOptionsMonitor<WeaponMenu> _CFGMonitor = null!;
     public override void Load(bool hotReload)
     {
-        Core.Configuration.InitializeJsonWithModel<FreeWeaponConfig>("FreeWeaponConfig.jsonc", "FreeWeaponCFG").Configure(builder =>
+        Core.Configuration.InitializeJsonWithModel<WeaponMenu>("WeaponMenuConfig.jsonc", "WeaponMenuCFG").Configure(builder =>
         {
-            builder.AddJsonFile("FreeWeaponConfig.jsonc", false, true);
+            builder.AddJsonFile("WeaponMenuConfig.jsonc", false, true);
         });
 
         var collection = new ServiceCollection();
         collection.AddSwiftly(Core);
 
         collection
-            .AddOptionsWithValidateOnStart<FreeWeaponConfig>()
-            .BindConfiguration("FreeWeaponCFG");
+            .AddOptionsWithValidateOnStart<WeaponMenu>()
+            .BindConfiguration("WeaponMenuCFG");
 
         collection.AddSingleton<Commands>();
         collection.AddSingleton<MenuHelper>();
@@ -45,11 +45,11 @@ public partial class HanTurretS2(ISwiftlyCore core) : BasePlugin(core)
         var Menus = ServiceProvider.GetRequiredService<Menu>();
         var MenusHelper = ServiceProvider.GetRequiredService<MenuHelper>();
 
-        _CFGMonitor = ServiceProvider.GetRequiredService<IOptionsMonitor<FreeWeaponConfig>>();
+        _CFGMonitor = ServiceProvider.GetRequiredService<IOptionsMonitor<WeaponMenu>>();
 
         _CFGMonitor.OnChange(newConfig =>
         {
-            Core.Logger.LogInformation($"免费武器菜单热更新成功");
+            Core.Logger.LogInformation($"weapon menu hot update successful");
         });
 
         _Commands.commands();
