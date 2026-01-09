@@ -1,0 +1,204 @@
+{
+  "WeaponMenuCFG": {
+    "CommandList": [
+      {
+        "WeaponName": "AS50狙击步枪",
+        "WeaponCommand": "sw_sb2YWrszaUeZkbfx",
+        "Price": "4300",
+        "Team": "CT"
+      },
+      {
+        "WeaponName": "sg552-地狱犬",
+        "WeaponCommand": "sw_i8mo0MCtSp6VfUPP",
+        "Price": "2800",
+        "Team": "T"
+      },
+      {
+        "WeaponName": "圣诞毁灭者",
+        "WeaponCommand": "sw_kYOuiOxgr0mSnCMv",
+        "Price": "3500",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "黄金沙鹰",
+        "WeaponCommand": "sw_gkRBFupJJQk3B0Uh",
+        "Price": "700",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "M4A1-Tech",
+        "WeaponCommand": "sw_pHfytgMYj3RQTphm",
+        "Price": "3100",
+        "Team": "CT"
+      },
+      {
+        "WeaponName": "M249-凤凰",
+        "WeaponCommand": "sw_JKt3z4oDXZ99QoaP",
+        "Price": "5200",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "MP7-凤凰",
+        "WeaponCommand": "sw_5tBgDDDOIo3wprxM",
+        "Price": "1500",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "原神-Scar20",
+        "WeaponCommand": "sw_8mISNzt7YbXolphk",
+        "Price": "4300",
+        "Team": "T"
+      },
+      {
+        "WeaponName": "CROW-3",
+        "WeaponCommand": "sw_ZEY4QukRRmZtJdWN",
+        "Price": "3800",
+        "Team": "CT"
+      },
+      {
+        "WeaponName": "AUG-无双",
+        "WeaponCommand": "sw_7HxN22k2SdZWIZFo",
+        "Price": "3300",
+        "Team": "CT"
+      },
+      {
+        "WeaponName": "旋风AK",
+        "WeaponCommand": "sw_wLEnuqGJn3CuUv4Y",
+        "Price": "2700",
+        "Team": "T"
+      },
+      {
+        "WeaponName": "MK18",
+        "WeaponCommand": "sw_fzi8GfK3JBu1AKJZ",
+        "Price": "2900",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "M99-电磁炮",
+        "WeaponCommand": "sw_ykSvWNxoPJyNFEtR",
+        "Price": "4800",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "Destroyer",
+        "WeaponCommand": "sw_Z2ZpSw6sY8E8LXoD",
+        "Price": "3600",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "恒宇双星",
+        "WeaponCommand": "sw_4p1V0qwdgckwdG8X",
+        "Price": "2000",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "星红双子",
+        "WeaponCommand": "sw_YcmNV0uqsxUCkiCQ",
+        "Price": "2100",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "金红双蝎",
+        "WeaponCommand": "sw_B5GTQyKyzsBvadG0",
+        "Price": "1800",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "英雄-SVD",
+        "WeaponCommand": "sw_nbhfvaW21rBTJ2Ll",
+        "Price": "4100",
+        "Team": "T"
+      },
+      {
+        "WeaponName": "M4A1-雷神",
+        "WeaponCommand": "sw_Wfb7QazPiQUbhXRk",
+        "Price": "3200",
+        "Team": "CT"
+      },
+      {
+        "WeaponName": "MCW-ice",
+        "WeaponCommand": "sw_UbiXTyhpQzJd5Lgt",
+        "Price": "2800",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "PKM-火焰",
+        "WeaponCommand": "sw_wJzvIiGahHwhTueH",
+        "Price": "5000",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "狙击加利尔",
+        "WeaponCommand": "sw_DLmE0PLTUg0dlchU",
+        "Price": "3000",
+        "Team": "T"
+      },
+      {
+        "WeaponName": "M5A3-Obsidian",
+        "WeaponCommand": "sw_PaVBF9xUZHmWsIiZ",
+        "Price": "3400",
+        "Team": "CT"
+      },
+      {
+        "WeaponName": "冰冻双蝎",
+        "WeaponCommand": "sw_Jrf0sfDEoWLT8hj7",
+        "Price": "1600",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "鲨鱼M3",
+        "WeaponCommand": "sw_apjoiGwvgmRUCtMG",
+        "Price": "1500",
+        "Team": "T"
+      },
+      {
+        "WeaponName": "MG3-充能",
+        "WeaponCommand": "sw_KBirhOKDersFYDpE",
+        "Price": "5100",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "skull5",
+        "WeaponCommand": "sw_p1ykcV9uLe8Bn0zG",
+        "Price": "2500",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "SkyAK-I",
+        "WeaponCommand": "sw_1uAQQGQSCnN4HqeD",
+        "Price": "2700",
+        "Team": "CT"
+      },
+      {
+        "WeaponName": "SkyAK-II",
+        "WeaponCommand": "sw_640STPsNaJhL8kml",
+        "Price": "2900",
+        "Team": "T"
+      },
+      {
+        "WeaponName": "Doom",
+        "WeaponCommand": "sw_IAzQYQgCEHOEizJK",
+        "Price": "4500",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "玫瑰刺刀",
+        "WeaponCommand": "sw_awbcRTNjNOmZLbKT",
+        "Price": "1200",
+        "Team": "ALL"
+      },
+      {
+        "WeaponName": "AK-4X",
+        "WeaponCommand": "sw_7QlZ6N87qCJS9cad",
+        "Price": "2800",
+        "Team": "T"
+      },
+      {
+        "WeaponName": "ASCI47",
+        "WeaponCommand": "sw_S9fUH2zvtKzmG96D",
+        "Price": "2600",
+        "Team": "ALL"
+      }
+    ]
+  }
+}
