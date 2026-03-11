@@ -10,7 +10,7 @@ namespace HanWeaponMenu;
 
 [PluginMetadata(
     Id = "HanWeaponMenu",
-    Version = "1.0",
+    Version = "1.1",
     Name = "H-AN 武器菜单/H-AN Weapons menu",
     Author = "H-AN",
     Description = "简单武器系统菜单,支持价格与队伍/Simple weapon system menu, supports price and team")]
